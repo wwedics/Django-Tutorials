@@ -1,33 +1,19 @@
-from django.http import HttpResponse
+# from django.http import HttpResponse
+from django.shortcuts import render
 
+def home(req):
+    # return HttpResponse("<h1>Home</h1>")
+    context = {'name': 'Sardor'}
+    return render(req, "index.html", context)
 
-def hello_world(request):
-    return HttpResponse(""" <a href='/home'>Home</a> 
-    <a href='/about'>About</a> <a href='/my_blog'>My Blog</a> <a href='/project'>Project</a>
-    <a href='/contact'>Contact</a>""")
+def about(req):
+    return render(req, "about.html")
 
-def home(request):
-    return HttpResponse("""<a href='/hello_world'>Hello World! <a href='/about'>About</a> 
-    <a href='/my_blog'>My Blog</a> <a href='/project'>Project</a> 
-    <a href='/contact'>Contact</a>""")
+def portfolio(req):
+    return render(req, "portfolio.html")
 
-def about(request):
-    return HttpResponse("""<a href='/hello_world'>Hello World! </a> <a href='/home'>Home</a>  
-    <a href='/my_blog'>My Blog</a> <a href='/project'>Project</a> 
-    <a href='/contact'>Contact</a>""")
+def blog(req):
+    return render(req, "blog.html")
 
-def my_blog(request):
-    return HttpResponse("""<a href='/hello_world'>Hello World! </a>
-    <a href='/home'>Home</a> <a href='/about'>About</a> <a href='/project'>Project</a> 
-    <a href='/contact'>Contact</a>""")
-    
-def project(request):
-    return HttpResponse("""<a href='/hello_world'>Hello World!</a>
-    <a href='/home'>Home</a> <a href='/about'>About</a> 
-    <a href='/contact'>Contact</a> <a href='/my_blog'>My Blog</a>""")
-    
-def contact(request):
-    return HttpResponse("""<a href='/hello_world'>Hello World!</a> <a href='/home'>Home</a> 
-    <a href='/about'>About</a> <a href='/my_blog'>My Blog</a> 
-    <a href='/project'>Project</a>""")
-    
+def contact(req):
+    return render(req, "contact.html")
