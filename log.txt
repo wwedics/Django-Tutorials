@@ -34,3 +34,6 @@ python manage.py shell
 
 - Create super user:
 python manage.py createsuperuser
+
+- Create model
+python manage.py makemigrations my_app
