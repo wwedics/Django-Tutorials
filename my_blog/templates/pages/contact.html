@@ -4,4 +4,15 @@
 
 <h1 class="text-center">Contact</h1>
 
+{% comment %} {{ data }} {% endcomment %}
+
+{% for i in data %}
+
+    <h1>{{i.location}}</h1>
+    <p>{{i.email}}</p>
+    <i>{{i.phone}}</i>
+    <p>{{i.name}}</p>
+
+{% endfor %}
+
 {% endblock contact %}
