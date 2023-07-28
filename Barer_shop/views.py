@@ -24,8 +24,10 @@ def service(req):
 
 def price_list(req):
     branche = Branche.objects.all()
+    price = Price.objects.all()
     context = {
-        "branche":branche
+        "branche":branche,
+        "price":price,
         }
     return render(req,"pages/price_list.html",context)
 
