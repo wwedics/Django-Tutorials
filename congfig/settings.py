@@ -43,9 +43,9 @@ INSTALLED_APPS = [
     # 'my_blog.apps.MyBlogConfig',
     # 'barbershop.apps.BarbershopConfig',
     # 'Barer_shop.apps.BarerShopConfig',
-    # 'models.apps.ModelsConfig',
+    'models.apps.ModelsConfig',
     # 'forms.apps.FormsConfig',
-    'todo.apps.TodoConfig',
+    # 'todo.apps.TodoConfig',
 ]
 
 MIDDLEWARE = [
