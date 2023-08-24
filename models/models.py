@@ -30,14 +30,10 @@ class Song(models.Model):
 
 
 
-class Author(models.Model):
-    name = models.CharField(max_length = 100)
-    desc = models.TextField(max_length = 300)
   
 class Book(models.Model):
     title = models.CharField(max_length = 100)
     desc = models.TextField(max_length = 300)
-    authors = models.ManyToManyField(Author)
 
     def __str__(self):
         return self.title

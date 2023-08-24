@@ -10,7 +10,8 @@ urlpatterns = [
     # path("", include("barbershop.urls")),
     # path("", include("Barer_shop.urls")),
     # path("", include("Barer_shop.urls")),
-    path("", include("models.urls")),
+    # path("", include("models.urls")),
     # path("", include("forms.urls")),
     # path("", include("todo.urls")),
+    path("", include("paginator.urls")),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
